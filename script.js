@@ -1,8 +1,8 @@
-fungsi fungsimau2(){
+function fungsimau2(){
        fungsi=0;tes();
 }
 jumlahKlik = 0;
-fungsi fungsibaru(btn){
+function fungsibaru(btn) {
   var tombol = document.getElementById("" + btn);
   var tombolParent = tombol.parentNode;
   
@@ -10,8 +10,8 @@ fungsi fungsibaru(btn){
   var tombolPosisiY = Math.floor(Math.random() * 75) + 1; // Posisi Y acak antara 1 dan 50
   var rotasiAcak = Math.floor(Math.random() * 360); // Rotasi acak antara 0 dan 359
 
-  // mengatur posisi baru tombol
-  tombol.style.position = "relatif";
+  // Mengatur posisi baru tombol
+  tombol.style.position = "relative";
   tombol.style.left = tombolPosisiX + "px";
   tombol.style.top = tombolPosisiY + "px";
   tombol.style.transform = "rotate(" + rotasiAcak + "deg)";
@@ -21,11 +21,11 @@ fungsi fungsibaru(btn){
   var teksKecil = document.createElement("span");
   teksKecil.innerHTML = "Harus boleh ya! 😝";
   teksKecil.style.fontSize = "12px";
-  teksKecil.style.position = "diperbaiki";
+  teksKecil.style.position = "fixed";
   teksKecil.style.bottom = "18vh";
   teksKecil.style.left = "50%";
   teksKecil.style.transform = "translateX(-50%)";
-  teksKecil.style.color = "putih";
+  teksKecil.style.color = "white";
   teksKecil.style.zIndex = "999";
   tombol.appendChild(teksKecil);
   */
@@ -35,74 +35,74 @@ teksjudulakhir = judulakhir.innerHTML; judulakhir.innerHTML="";
 tekskalimatakhir = kalimatakhir.innerHTML; kalimatakhir.innerHTML="";
 tekspalingakhir = palingakhir.innerHTML; palingakhir.innerHTML="";
 
-  fungsi fungsimau(){
+  function fungsimau(){
        fungsi=0;tes();
        setTimeout(mulaitextsec,2500);
 }
-fungsi async fungsigamau(){
-  	menunggu swalst.fire({judul: '' + kataditolak.innerHTML, timer: 2000, imageUrl: '' + stikerditolak.src,});
+async function fungsigamau(){
+  	await swalst.fire({title: '' + kataditolak.innerHTML, timer: 2000, imageUrl: '' + stikerditolak.src,});
    }
-  fungsi async fungsigamau2(){
-       menunggu swalst.fire({judul: '' + kataditolak2.innerHTML, timer: 2000, imageUrl: '' + stikerditolak2.src,});
+  async function fungsigamau2(){
+       await swalst.fire({title: '' + kataditolak2.innerHTML, timer: 2000, imageUrl: '' + stikerditolak2.src,});
 }
-  fungsi mulaitextseco(){textsec2.style="opacity:0";setTimeout(lanjtextseco,400)}
+  function mulaitextseco(){textsec2.style="opacity:0";setTimeout(lanjtextseco,400)}
   function lanjtextseco(){textsec2.style="display:none";textsec2b.style="opacity:1";setTimeout(muncultombol,700);}
   
   function mulaitextsec(){stikerdouble.style="opacity:0;transform:scale(0)";setTimeout(gantifotodouble,400);textsec3.style="opacity:0";setTimeout(lanjtextsec,400)}
-  fungsi lanjtextsec(){textsec3.style="display:none";textsec3b.style="opacity:1";setTimeout(smn,700);}
+  function lanjtextsec(){textsec3.style="display:none";textsec3b.style="opacity:1";setTimeout(smn,700);}
   function gantifotodouble(){stikerdouble.src=stikerdouble2.src;stikerdouble.style="";}
 
   /*var range = document.querySelector("input");
-  var rangeval = dokumen.querySelector(".inivalue");
-  rangeval.textContent = rentang.nilai + "%";
+  var rangeval = document.querySelector(".inivalue");
+  rangeval.textContent = range.value + "%";
   range.oninput = function(){rangeval.textContent = this.value + "%";persen=rangeval.textContent;pesanwhatsapp = pesanWA + persen + "!";}
   */
 
-var tanggal = Tanggal baru();
-var hari = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
-var bulan = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember "];
-var jam = tanggal.getHours();
-var menit = tanggal.getMinutes();
+var date = new Date();
+var days = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+var months = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+var hours = date.getHours();
+var minutes = date.getMinutes();
 
 // Tambahkan awalan nol jika jam atau menit kurang dari 10
-if (jam < 10) {jam = "0" + jam;}
-if (menit < 10) {menit = "0" + menit;}
+if (hours < 10) {hours = "0" + hours;}
+if (minutes < 10) {minutes = "0" + minutes;}
 
-var hari = hari[tanggal.getDay()];
-var dateNum = tanggal.getDate();
-var bulan = bulan[tanggal.getMonth()];
-var tahun = tanggal.getFullYear();
+var day = days[date.getDay()];
+var dateNum = date.getDate();
+var month = months[date.getMonth()];
+var year = date.getFullYear();
 
-console.log(jam + "." + menit + " WIB - " + hari + ", " + tanggalNum + " " + bulan + " " + tahun);
+console.log(hours + "." + minutes + " WIB - " + day + ", " + dateNum + " " + month + " " + year);
 
-var elemen = document.querySelector("body");var watermark = document.createElement("div");
+var element = document.querySelector("body");var watermark = document.createElement("div");
 
 // Setel teks watermark dan propertinya
-watermark.textContent = hari + ", " + tanggalNum + " " + bulan + " " + tahun;
-watermark.style = "warna:putih;opacity:.5;ukuran font:10px;posisi:tetap;bawah:25px;kiri:25px;z-index:150";
-elemen.appendChild(tanda air);
+watermark.textContent = day + ", " + dateNum + " " + month + " " + year;
+watermark.style = "color:white;opacity:.5;font-size:10px;position:fixed;bottom:25px;left:25px;z-index:150";
+element.appendChild(watermark);
 
-////////////////////////////////////////////////////
+//////////////////////////////////////////////////
 
 initeksnimasi = teksnimasi.innerHTML;teksnimasi.innerHTML="";
-fungsi katateksnimasi(){
+function katateksnimasi(){
   	new TypeIt("#teksnimasi", {
-      string: ["" + initeksnimasi], startDelay: 50, kecepatan: 55, kursor: true,
-      setelah Selesai: fungsi(){
+      strings: ["" + initeksnimasi], startDelay: 50, speed: 55, cursor: true,
+      afterComplete: function(){
       	teksnimasi.innerHTML = initeksnimasi;
         stikerdua.style="opacity:0;transform:scale(0)";setTimeout(gantifotodua,400);
         //setTimeout(smn,200);
         setTimeout(muncultombol2,500);
-      },}).pergi();
+      },}).go();
 }
 function gantifotodua(){stikerdua.src=stikerdua2.src;stikerdua.style="";}
 
 fungsi=0;fungsiklik=0;skrg=1;
-fungsi tes(){
+function tes(){
   if(fungsi==0){
-    bermainaud();
-    initom.style="opacity:0;bawah:0;";
-    window.scrollBy({atas: tinggi,perilaku: 'halus'});
+    playaud();
+    initom.style="opacity:0;bottom:0;";
+    window.scrollBy({top: tinggi,behavior: 'smooth'});
     fungsi = 1;
     skrg++;
     //if(skrg<=2){setTimeout(smn,700);}
@@ -110,99 +110,99 @@ fungsi tes(){
     if(skrg==2){fungsi=0;setTimeout(mulaitextseco,2500);}
     if(skrg==3){fungsi=0;setTimeout(mulaitextsec,2800);}
     if(skrg==4){setTimeout(katateksnimasi,700);}
-    jika(skrg==5){}
+    if(skrg==5){}
     if(skrg>=6){initom.style="opacity:0;bottom:0;";}
   }
 }
-  fungsi smn(){fungsi=0;initom.style="";}
-  initom.style="opacity:0;bottom:0;transisi:tidak ada";
+  function smn(){fungsi=0;initom.style="";}
+  initom.style="opacity:0;bottom:0;transition:none";
 
   function muncultombol(){fungtom=1;Tombol.style="opacity:1;transform:scale(1)";}
   function muncultombol2(){Tombol2.style="opacity:1;transform:scale(1)";}
   
-fungsi aksiakhir() {
+function aksiakhir() {
   if(fungsiklik==0){
     fungsiklik=1;
     setTimeout(katajudul,100)
   }
 }
 
-fungsi katajudul(){
+function katajudul(){
   	new TypeIt("#judulakhir", {
-      string: ["" + teksjudulakhir], startDelay: 50, kecepatan: 50, kursor: true,
-      setelah Selesai: fungsi(){
+      strings: ["" + teksjudulakhir], startDelay: 50, speed: 50, cursor: true,
+      afterComplete: function(){
       	judulakhir.innerHTML = teksjudulakhir;
           setTimeout(katakata,400);
-      },}).pergi();
+      },}).go();
 }
-fungsi katakata(){
+function katakata(){
 	  new TypeIt("#kalimatakhir", {
-      string: ["" + tekskalimatakhir], startDelay: 50, kecepatan: 48, kursor: true,
-      setelah Selesai: fungsi(){
+      strings: ["" + tekskalimatakhir], startDelay: 50, speed: 48, cursor: true,
+      afterComplete: function(){
       	kalimatakhir.innerHTML = tekskalimatakhir;
           //judulakhir.style="opacity:0;transform:scale(0);";
           setTimeout(teksmuncul,20);
           setInterval(berjatuhan,200);
           setTimeout(kataakhir,700);
-      },}).pergi();
+      },}).go();
 }
-fungsi teksmuncul(){
-  //teksjudulakhir2 = "Aku Cinta Kamu ✨";
+function teksmuncul(){
+  //teksjudulakhir2 = "I Love You ✨";
 	//judulakhir.innerHTML=teksjudulakhir2;
-	//judulakhir.style="font-family:var(--gaya-font3);ukuran font:27px";
+	//judulakhir.style="font-family:var(--gaya-font3);font-size:27px";
 	//setTimeout(jjteksnim,300);
 	stikerakhir.style="opacity:0;transform:scale(0)";
 	setTimeout(gantifotoakhir,400);
 }
-function jjteksnim(){judulakhir.style.animation="rto .8s alternatif tak terbatas";}
+function jjteksnim(){judulakhir.style.animation="rto .8s infinite alternate";}
 function gantifotoakhir(){stikerakhir.src=stikerakhir2.src;stikerakhir.style="";}
-fungsi kataakhir(){
+function kataakhir(){
 	  new TypeIt("#palingakhir", {
-      string: ["" + tekspalingakhir], startDelay: 50, kecepatan: 50, kursor: true,
-      setelah Selesai: fungsi(){
+      strings: ["" + tekspalingakhir], startDelay: 50, speed: 50, cursor: true,
+      afterComplete: function(){
       	palingakhir.innerHTML = tekspalingakhir;
           setTimeout(muncultombol3,500);
-      },}).pergi();
+      },}).go();
 }
 function muncultombol3(){fungtom2=1;TombolWA.style="opacity:1;transform:scale(1)";}
 function menuju(){if(fungtom2==1){window.location = "https://api.whatsapp.com/send?phone=&text=" + pesanwhatsapp;}}
 
 tinggi = iniakhir.offsetHeight;
-function menetapkantinggi(){tinggi = iniakhir.offsetHeight;}
+function tentukantinggi(){tinggi = iniakhir.offsetHeight;}
 setInterval(tentukantinggi,200);
 console.log(tinggi);
 
-fungsiAud=0;fungsi playaud(){if(fungsiAud==0){fungsiAud=1;audio.play();}}
-fungsi keatas(){window.scrollTo(0, 0);}
+fungsiAud=0;function playaud(){if(fungsiAud==0){fungsiAud=1;audio.play();}}
+function keatas(){window.scrollTo(0, 0);}
 
-//window.addEventListener("memuat", (peristiwa) => {
-fungsi mulaiyuk(){
-    jendela.scrollTo(0, 0);
+//window.addEventListener("load", (event) => {
+function mulaiyuk(){
+    window.scrollTo(0, 0);
     setTimeout(keatas,500);
     
-    var overlay = dokumen.querySelector(".overlay");
-    overlay.style.display = "tidak ada";
-    initom.gaya="";
-    first_stiker.style="opacity:1;transisi:semua kemudahan";
-    ScrollReveal({ setel ulang: benar });
+    var overlay = document.querySelector(".overlay");
+    overlay.style.display = "none";
+    initom.style="";
+    first_stiker.style="opacity:1;transition:all 2s ease";
+    ScrollReveal({ reset: true });
     ScrollReveal().reveal(".show-once", { reset: false});
-    ScrollReveal().reveal(".title", {durasi: 2500,asal: "atas",jarak: "50px", easing: "cubic-bezier(0.5, 0, 0, 1)", putar: { x: 20, z: -10 }});
-    ScrollReveal().reveal(".fade-in", {delay: 200, durasi: 2400,move: 0});
-    ScrollReveal().reveal(".scaleUp", {durasi: 2500, skala: 0,85});
-    ScrollReveal().reveal(".flip", {delay: 200, durasi: 2000, putar: { x: 20, z: 20}});
-    ScrollReveal().reveal(".slide-right", {durasi: 1000,asal: "kiri",jarak: "300px",easing: "ease-in-out"});
-    ScrollReveal().reveal(".slide-up", {durasi: 1500, asal: "bawah", jarak: "100px", pelonggaran: "cubic-bezier(.37,.01,.74,1)", opasitas: 0, skala: 0,5});
+    ScrollReveal().reveal(".title", {duration: 2500,origin: "top",distance: "50px", easing: "cubic-bezier(0.5, 0, 0, 1)", rotate: { x: 20, z: -10 }});
+    ScrollReveal().reveal(".fade-in", {delay: 200, duration: 2400,move: 0});
+    ScrollReveal().reveal(".scaleUp", {duration: 2500, scale: 0.85});
+    ScrollReveal().reveal(".flip", {delay: 200, duration: 2000, rotate: { x: 20, z: 20}});
+    ScrollReveal().reveal(".slide-right", {duration: 1000,origin: "left",distance: "300px",easing: "ease-in-out"});
+    ScrollReveal().reveal(".slide-up", {duration: 1500, origin: "bottom", distance: "100px", easing: "cubic-bezier(.37,.01,.74,1)", opacity: 0, scale: 0.5});
     
     document.addEventListener('scroll', function(e) {
-        biarkan documentHeight = document.body.scrollHeight;
-        biarkan currentScroll = window.scrollY + window.innerHeight;
-        biarkan pengubah = 200;
-        if(Gulir Saat Ini + pengubah > tinggi dokumen) {
+        let documentHeight = document.body.scrollHeight;
+        let currentScroll = window.scrollY + window.innerHeight;
+        let modifier = 200; 
+        if(currentScroll + modifier > documentHeight) {
             console.log('Sudah sampai bawah!');
-            initom.style="opacity:0;bawah:0";
+            initom.style="opacity:0;bottom:0";
             setTimeout(aksiakhir,10);
-        } kalau tidak {
-            //initom.gaya="";
+        } else {
+            //initom.style="";
         }
     })
 //})
